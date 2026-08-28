@@ -128,7 +128,51 @@ across Maharashtra. We help businesses identify suitable properties
 based on location, size and operational requirements.
 </p>
 </section>
+<section id="enquiry">
+<div class="title">
+<h2>Send Your Property Requirement</h2>
+<p>Tell us what commercial property you are looking for.</p>
+</div>
 
+<div style="max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,.08);">
+
+<input id="name" type="text" placeholder="Your Name" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="mobile" type="tel" placeholder="Mobile Number" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="location" type="text" placeholder="Preferred Location" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="area" type="text" placeholder="Required Area / Size" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<textarea id="message" placeholder="Property Requirement / Message" rows="5" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;"></textarea>
+
+<a onclick="sendWhatsApp()" class="btn whatsapp" style="border:none;cursor:pointer;">
+Send Enquiry on WhatsApp
+</a>
+
+</div>
+</section>
+
+<script>
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+let mobile = document.getElementById("mobile").value;
+let location = document.getElementById("location").value;
+let area = document.getElementById("area").value;
+let message = document.getElementById("message").value;
+
+let text =
+"Hello PrimePoint Realty,%0A%0A" +
+"Name: " + name + "%0A" +
+"Mobile: " + mobile + "%0A" +
+"Preferred Location: " + location + "%0A" +
+"Required Area: " + area + "%0A" +
+"Requirement: " + message;
+
+window.open("https://wa.me/918855924593?text=" + text, "_blank");
+}
+</script>
 <section class="contact" id="contact">
 <div class="title">
 <h2>Get In Touch</h2>
