@@ -10,7 +10,19 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;color:#222;line-height:1.6;background:#f7f7f7}
 header{background:#111;color:#fff;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:25px;font-weight:bold}
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
+}
+
+header{
+    min-height:80px;
+}
+
+nav a{
+    font-size:16px;
+}
 .logo span{color:#d4af37}
 nav a{color:#fff;text-decoration:none;margin-left:20px}
 .hero{background:#171717;color:#fff;text-align:center;padding:90px 20px}
@@ -66,6 +78,54 @@ Call Now
 
 <section id="services">
 <div class="title">
+<h2>Commercial Property Solutions</h2>
+<p>Professional property solutions for businesses across Maharashtra</p>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>🏦 Banking & Financial Spaces</h3>
+<p>Commercial locations suitable for banks, NBFCs and financial institutions.</p>
+</div>
+
+<div class="card">
+<h3>🏪 Retail Stores & Shops</h3>
+<p>High-potential retail spaces for brands, stores and business expansion.</p>
+</div>
+
+<div class="card">
+<h3>🏬 Showrooms</h3>
+<p>Commercial showroom spaces for retail brands, automobile and other businesses.</p>
+</div>
+
+<div class="card">
+<h3>🏭 Warehouses & Logistics</h3>
+<p>Warehouse and logistics properties for storage, distribution and operations.</p>
+</div>
+
+<div class="card">
+<h3>📦 Dark Stores</h3>
+<p>Strategic locations for quick-commerce and last-mile delivery operations.</p>
+</div>
+
+<div class="card">
+<h3>🛒 E-commerce & Quick Commerce</h3>
+<p>Property sourcing for e-commerce, quick-commerce and fulfilment requirements.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Commercial Leasing</h3>
+<p>End-to-end commercial property sourcing and leasing support.</p>
+</div>
+
+<div class="card">
+<h3>📍 Location-Based Property Sourcing</h3>
+<p>We identify suitable properties based on your location, size and business requirements.</p>
+</div>
+
+</div>
+</section>
 <h2>Our Services</h2>
 <p>Commercial properties for businesses and investors</p>
 </div>
@@ -116,7 +176,51 @@ across Maharashtra. We help businesses identify suitable properties
 based on location, size and operational requirements.
 </p>
 </section>
+<section id="enquiry">
+<div class="title">
+<h2>Send Your Property Requirement</h2>
+<p>Tell us what commercial property you are looking for.</p>
+</div>
 
+<div style="max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,.08);">
+
+<input id="name" type="text" placeholder="Your Name" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="mobile" type="tel" placeholder="Mobile Number" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="location" type="text" placeholder="Preferred Location" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<input id="area" type="text" placeholder="Required Area / Size" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;">
+
+<textarea id="message" placeholder="Property Requirement / Message" rows="5" style="width:100%;padding:14px;margin-bottom:12px;border:1px solid #ddd;border-radius:6px;"></textarea>
+
+<a onclick="sendWhatsApp()" class="btn whatsapp" style="border:none;cursor:pointer;">
+Send Enquiry on WhatsApp
+</a>
+
+</div>
+</section>
+
+<script>
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+let mobile = document.getElementById("mobile").value;
+let location = document.getElementById("location").value;
+let area = document.getElementById("area").value;
+let message = document.getElementById("message").value;
+
+let text =
+"Hello PrimePoint Realty,%0A%0A" +
+"Name: " + name + "%0A" +
+"Mobile: " + mobile + "%0A" +
+"Preferred Location: " + location + "%0A" +
+"Required Area: " + area + "%0A" +
+"Requirement: " + message;
+
+window.open("https://wa.me/918855924593?text=" + text, "_blank");
+}
+</script>
 <section class="contact" id="contact">
 <div class="title">
 <h2>Get In Touch</h2>
